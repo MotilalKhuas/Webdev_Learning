@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin : 0px;
+            padding : 0px;
+            box-sizing:border-box;
+        }
+
+        .container{
+            display : grid;
+            grid-template-columns: 200px auto;
+            background-color: #2196F3;
+            gap : 5px;
+            padding : 5px;
+            max-width: 700px;
+            margin : 0 auto;
+        }
+
+        .container > section{
+            background-color: rgba(255, 255, 255, 0.8);
+            padding : 20px;
+        }
+
+        .container > .item1{
+            grid-column : 1/3;
+            text-align: center;
+        }
+
+        .container > .item2 > ul {
+            list-style-type: none;
+        }
+
+        .container > .item4{
+            grid-column : 1/3;
+        }
+
+        @media screen and (max-width : 500px){
+            .container > .item2{
+                grid-column : 1/span 2;
+            }
+
+            .container > .item2 > ul{
+                display : flex;
+                justify-content: space-around;
+
+            }
+
+            .container > .item3{
+                grid-column : 1/span 2;
+            }
+        }
+
+
+        /* .auto-container{
+            display : grid;
+            max-width : 700px;
+            margin : 30px auto; 
+            padding : 5px;
+            grid-template-columns : 200px 200px 200px 50px 50px;
+            grid-template-areas : 'item1 item1 item1 item1 item1'
+                                  'item2 item2 item3 item3 item3'
+                                  'item2 item2 item4 item4 item4'
+                                  'item5 item5 item4 item4 item4';
+            grid-auto-rows : minmax(100px, 100px); 
+            grid-gap : 5px;
+            background-color: rgb(208, 230, 208);
+        }
+
+        .auto-container > .box{
+            height : 100%;
+            width : 100%;
+            background-color: rgb(97, 158, 97);
+        }
+
+        .auto-container > #item1 {
+            grid-area: item1;
+        }
+
+        .auto-container > #item2 {
+            grid-area: item2;
+        }
+
+        .auto-container > #item3 {
+            grid-area: item3;
+        }
+
+        .auto-container > #item4 {
+            grid-area: item4;
+        }
+
+        .auto-container > #item5 {
+            grid-area: item5;
+        } */
+      
+    </style>
+</head>
+<body>
+    <div class="container">
+       <section class="item1">
+            <h1>My Header</h1>
+       </section>
+
+       <section class="item2">
+            <ul>
+                <li><a href="#" target="content-area">Link-1</a></li>
+                <li><a href="#" target="content-area">Link-2</a></li>
+                <li><a href="#" target="content-area">Link-3</a></li>   
+            </ul>
+       </section>
+
+       <section class="item3">
+            <h1>Lorem Ipsum</h1>
+            <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Ridiculus sit nisl laoreet facilisis aliquet. Potenti dignissim litora eget montes rhoncus sapien neque urna. Cursus libero sapien integer magnis ligula lobortis quam ut.</p>
+       </section>
+
+       <Section class="item4">
+            <h2>Footer</h2>
+       </Section>
+    </div>
+
+
+    <!-- <div class="auto-container">
+        <div class="box" id="item1">1</div>
+        <div class="box" id="item2">2</div>
+        <div class="box" id="item3">3</div>
+        <div class="box" id="item4">4</div>
+        <div class="box" id="item5">5</div>
+        <div class="box" id="item6">6</div>
+        <div class="box" id="item7">7</div>
+        <div class="box" id="item8">8</div>
+        <div class="box" id="item9">9</div>
+        <div class="box" id="item10">10</div>
+    </div> -->
+</body>
+</html>
