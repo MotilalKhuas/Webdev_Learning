@@ -22,8 +22,12 @@
 
 body{
     height : 100%;
-    padding: 2rem;
+    padding: 0.1rem;
     background-color: var(--background-color);
+}
+
+header{
+    background-color: #2563eb;
 }
 
 .header-content{
@@ -32,6 +36,7 @@ body{
     align-items: center;
     margin : 0 auto;
     max-width: 1280px;
+    background-color: #718096;
 }
 
 .logo{
@@ -40,6 +45,7 @@ body{
     font-size: 2rem;
     font-weight : bold;
     color: var(--text-color);
+    background-color: aqua;
 }
 
 .logo > img{
@@ -49,6 +55,11 @@ body{
 
 .logo > span{
     margin-left : 0.625rem;
+}
+
+nav{
+    display: none;
+    background-color: aqua;
 }
 
 nav > a{
@@ -64,15 +75,33 @@ nav > a:hover{
 }
 
 .contact-button{
+    display: none;
     background-color: var(--primary-color);
     color : var(--background-color);
     font-size: 1rem;
     font-weight: 600;
     padding: 0.75rem 1.5rem;
     border-radius: 0.375rem;
+    background-color: aqua;
 }
 
 .contact-button:hover{
     transition-duration: 0.5s;
     background-color: #5254f8;
+}
+
+.menu-icon{
+    display: block;
+    height : 3rem;
+    width :3rem;
+}
+
+@media screen and (min-width : 900px){
+    nav, .contact-button{
+        display : block;
+    }
+
+    .menu-icon{
+        display: none;
+    }
 }
