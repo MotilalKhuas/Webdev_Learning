@@ -228,7 +228,7 @@ nav > a:hover{
     /* background-color: pink; */
 }
 
-.company-title{
+.section-title{
     font-size: 2.3rem;
     font-weight: bold;
     color: var(--text-color);
@@ -267,5 +267,86 @@ nav > a:hover{
         grid-template-columns: repeat(2, 1fr);
         row-gap : 4rem;
         max-width: 450px;
+    }
+}
+
+.feature-section{
+    background-color: var(--light-gray);
+    padding: 2.5rem 1rem;
+    text-align: center;
+}
+
+.feature-container{
+    max-width: 800px;
+    margin: 0 auto;
+    /* background-color: palevioletred; */
+}
+
+.main-description{
+    color: var(--gray);
+    margin : 1rem 0 2rem 0;
+}
+
+.cards-container{
+    display : grid;
+    grid-template-columns: repeat(2, auto);
+    gap : 2rem;
+}
+
+.card{
+    padding : 2rem;
+    border-radius: 1rem;
+}
+
+.card:nth-child(1){
+    background-color: #4a90e2;
+}
+
+.card:nth-child(2){
+    background-color: #FF6289;
+}
+
+.card:nth-child(3){
+    background-color: #fcbf58;
+}
+
+.card:nth-child(4){
+    background-color: #44bfc3;
+}
+
+.card:nth-child(5){
+    background-color: #77b05d;
+}
+
+.card:nth-child(6){
+    background-color: #7d78b1;
+}
+
+.card-logo-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding : 0.85rem;
+    margin : 0 auto;
+    border-radius: 50%;
+    height : 3rem;
+    width : 3rem;
+    background-color: var(--background-color);
+}
+
+.card-title{
+    color: white;
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin : 1rem 0;
+}
+
+.card-description{
+    color: white;
+}
+
+@media screen and (max-width : 560px){
+    .cards-container{
+        grid-template-columns: auto;
     }
 }
