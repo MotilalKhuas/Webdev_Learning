@@ -28,6 +28,7 @@ body{
 
 header{
     padding : 1rem;
+    /* background-color: #5254f8; */
 }
 
 .header-content{
@@ -100,8 +101,9 @@ nav > a:hover{
     }
 }
 
-.hero{
+.hero-section{
     padding : 1rem;
+    /* background-color: rebeccapurple; */
 }
 
 .hero-container{
@@ -218,5 +220,52 @@ nav > a:hover{
 
     .right-container > img{
         width : 80%;
+    }
+}
+
+.company-section{
+    padding : 2rem 1rem;
+    /* background-color: pink; */
+}
+
+.company-title{
+    font-size: 2.3rem;
+    font-weight: bold;
+    color: var(--text-color);
+    text-align: center;
+}
+
+.company-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background-color: var(--light-gray);
+    border-radius: 1rem;
+    padding : 1.8rem 0;
+    margin : 2rem auto;
+    max-width: 650px;
+}
+
+.company-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 500;
+    gap : 0.5rem;
+}
+
+.company-logo > img{
+    height : 1.56rem;
+}
+
+.company-logo > span{
+    color: var(--gray);
+}
+
+@media screen and (max-width:560px) {
+    .company-container{
+        grid-template-columns: repeat(2, 1fr);
+        row-gap : 4rem;
+        max-width: 450px;
     }
 }
