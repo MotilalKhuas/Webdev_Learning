@@ -28,7 +28,6 @@ body{
 
 header{
     padding : 1rem;
-    /* background-color: #5254f8; */
 }
 
 .header-content{
@@ -39,7 +38,7 @@ header{
     max-width: 1280px;
 }
 
-.logo{
+.header-logo{
     display: flex;
     align-items :  center;
     font-size: 2rem;
@@ -47,12 +46,12 @@ header{
     color: var(--text-color);
 }
 
-.logo > img{
+.header-logo > img{
     height : 5.875rem;
     width : 1.938rem;
 }
 
-.logo > span{
+.header-logo > span{
     margin-left : 0.625rem;
 }
 
@@ -103,7 +102,6 @@ nav > a:hover{
 
 .hero-section{
     padding : 1rem;
-    /* background-color: rebeccapurple; */
 }
 
 .hero-container{
@@ -119,35 +117,30 @@ nav > a:hover{
     flex-direction: column;
     justify-content: center;
     width: 45%;
-    /* background-color: blue; */
 }
 
 .hero-label{
     font-size: 1.15rem;
     font-weight: 600;
     color: var(--primary-color);
-    /* background-color: red; */
 }
 
 .hero-title{
     font-size: 3.8rem;
     color: var(--text-color);
     margin : 1rem 0 2.5rem 0;
-    /* background-color: green; */
 }
 
 .hero-description{
     color: var(--gray);
     line-height: 1.3rem;
     width: 80%;
-    /* background-color: orange; */
 }
 
 .hero-btn{
     display: flex;
     gap : 1.5rem;
     margin-top: 3rem;
-    /* background-color: yellowgreen; */
 }
 
 .start-btn, .tour-btn{
@@ -176,7 +169,6 @@ nav > a:hover{
     justify-content: right;
     width: 50%;
     overflow: hidden;
-    /* background-color: aqua; */
 }
 
 .right-container > img{
@@ -225,7 +217,6 @@ nav > a:hover{
 
 .company-section{
     padding : 2rem 1rem;
-    /* background-color: pink; */
 }
 
 .section-title{
@@ -279,7 +270,6 @@ nav > a:hover{
 .feature-container{
     max-width: 800px;
     margin: 0 auto;
-    /* background-color: palevioletred; */
 }
 
 .main-description{
@@ -354,13 +344,11 @@ nav > a:hover{
 .testimonial-section{
     padding: 2.5rem 1rem;
     text-align: center;
-    /* background-color: #77b05d; */
 }
 
 .testimonial-container{
     margin : 0 auto;
     max-width: 1280px;
-    /* background-color: #fcbf58; */
 }
 
 .testimonial-cards-container{
@@ -368,7 +356,6 @@ nav > a:hover{
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap : 2rem;
     margin-top : 1.5rem;
-    /* background-color: #FF6289; */
 }
 
 .testimonial-card{
@@ -417,7 +404,6 @@ nav > a:hover{
     overflow: hidden;
     margin : 0 auto;
     max-width: 1280px;
-    height : 300px;
     background-color: var(--light-gray);
 }
 
@@ -435,7 +421,7 @@ nav > a:hover{
 }
 
 .signup-right-container{
-    padding : 1rem 3rem;
+    padding : 3rem;
     width : 50%;
 }
 
@@ -506,4 +492,118 @@ nav > a:hover{
     .email-form{
         gap:0.5rem;
     }
+}
+
+.footer-section{
+    padding: 2.5rem 1rem;
+    width : 100%;
+}
+
+.footer-container{
+    margin : 0 auto;
+    max-width : 1280px;
+}
+
+.footer-top{
+    display: grid;
+    /* row-gap: 3rem; */
+    grid-template-columns: 2.5fr 1fr 1fr 1fr 1fr;
+}
+
+.footer-logo{
+    display: flex;
+    align-items :  center;
+    font-size: 1.7rem;
+    font-weight : bold;
+    color: var(--text-color);
+    margin-top : -2rem;
+}
+
+.footer-logo > img{
+    height : 5.875rem;
+    width : 1.938rem;
+}
+
+.footer-logo > span{
+    margin-left : 0.625rem;
+}
+
+.slogan{
+    color : var(--gray);
+    margin-bottom : 2rem;
+}
+
+.social-link-group{
+    display: flex;
+    gap : 1rem;
+}
+
+.social-logo > img{
+    height : 1.6rem;
+    width : 1.6rem;
+}
+
+.link-group-title{
+    font-size: 1.15rem;
+    font-weight: 500;
+    color : var(--text-color)
+}
+
+.link-group{
+    display: flex;
+    flex-direction: column;
+    gap : 0.8rem;
+    margin : 2rem 0;
+    list-style-type : none;
+}
+
+.link-group > li > a{
+    font-size: 0.9rem;
+    color : var(--gray)
+}
+
+@media screen and (max-width : 900px){
+    .footer-top{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    
+    .social-container{
+        display : flex;
+        flex-direction: column;
+        align-items: center;
+        grid-column : 1 / span 4;
+        justify-self: center;
+        margin-bottom: 3rem;
+        text-align: center;
+    }
+
+    .slogan{
+        margin-top: -1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .link-container{
+        justify-self: center;
+    }
+}
+
+@media screen and (max-width : 550px){
+    .footer-top{
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .social-container{
+        grid-column : 1 / span 2;
+    }
+}
+
+.footer-bottom{
+    color : var(--gray);
+    text-align : center;
+}
+
+.footer-bottom > p{
+    border-top: 1px solid #E5E7EB;
+    font-size: 0.8rem;
+    padding-top : 2rem;
 }
