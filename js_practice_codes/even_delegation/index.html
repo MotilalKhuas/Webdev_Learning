@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event-delegation</title>
+    <script src="https://kit.fontawesome.com/adcbb26a4c.js" crossorigin="anonymous"></script>
+    <style>
+
+        *{
+            margin : 0;
+            padding : 0;
+        }
+
+        section{
+            margin : 2rem 1rem;
+        }
+
+        /* ================= SECTION - 01 ================= */
+        th{
+            font-size: 1.3rem;
+        }
+
+        td{
+            text-align: center;
+            font-size: 1rem;
+            border : 1px solid black;
+            padding : 2rem 2.5rem
+        }
+
+        #bagua-chart .nw {
+            background: #999;
+        }
+ 
+        #bagua-chart .n {
+            background: #03f;
+            color: #fff;
+        }
+ 
+        #bagua-chart .ne {
+            background: #ff6;
+        }
+ 
+        #bagua-chart .w {
+            background: #ff0;
+        }
+ 
+        #bagua-chart .c {
+            background: #60c;
+            color: #fff;
+        }
+ 
+        #bagua-chart .e {
+            background: #09f;
+            color: #fff;
+        }
+ 
+        #bagua-chart .sw {
+            background: #963;
+            color: #fff;
+        }
+ 
+        #bagua-chart .s {
+            background: #f60;
+            color: #fff;
+        }
+ 
+        #bagua-chart .se {
+            background: #0c3;
+            color: #fff;
+        }
+
+        #bagua-chart .selected{
+            background: red;
+        }
+
+
+
+
+        /* ================= SECTION - 02 ================= */
+        #container-2{
+            display: flex;
+            flex-direction: column;
+            max-width : 500px;
+            background-color: rgba(255, 192, 203, 0.89);
+        }
+
+        .card{
+            padding : 1.5rem 2rem;
+            border-bottom: 2px solid rgb(255, 129, 150);
+        }
+
+        .card-header{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.6rem;
+        }
+
+        .card-header > i{
+            font-size: 1.3rem;
+            cursor: pointer;
+            color : red
+        }
+
+
+
+
+         /* ================= SECTION - 03 ================= */
+
+         ul, li{
+            margin-left: 1rem;
+            font-size: 1.1rem;
+         }
+
+         #tree span:hover{
+            font-weight: bold;
+         }
+         
+
+    </style>
+</head>
+<body>
+    <section>
+        <div id="container-1">
+            <table id="bagua-chart">
+                <th colspan="3"><i>Bagua Chart : Direction, Element, Color, Meaning</i></th>
+                <tr>
+                    <td class="nw">
+                        <strong>Northwest</strong><br>Metal<br>Silver<br>Elders
+                    </td>
+                    <td class="n">
+                        <strong>North</strong><br>Water<br>Blue<br>Change
+                    </td>
+                    <td class="ne">
+                        <strong>Northeast</strong><br>Earth<br>Yellow<br>Direction
+                    </td>
+                </tr>
+                <tr>
+                    <td class="w">
+                        <strong>West</strong><br>Metal<br>Gold<br>Youth
+                    </td>
+                    <td class="c">
+                        <strong>Center</strong><br>All<br>Purple<br>Harmony
+                    </td>
+                    <td class="e">
+                        <strong>East</strong><br>Wood<br>Blue<br>Future
+                    </td>
+                </tr>
+                <tr>
+                    <td class="s">
+                        <strong>Southwest</strong><br>Earth<br>Brown<br>Tranquility
+                    </td>
+                    <td class="sw">
+                        <strong>South</strong><br>Fire<br>Orange<br>Fame
+                    </td>
+                    <td class="se">
+                        <strong>Southeast</strong><br>Wood<br>Green<br>Romance
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </section>
+
+    <section>
+        <div id="container-2">
+            <div class="card">
+                <div class="card-header">
+                    <h3>Horse</h3>
+                    <i class="fa-regular fa-circle-xmark" id="close"></i>
+                </div>
+                <p>The horse is one of two extant subspecies of Equus ferus. It is an odd-toed ungulate mammal belonging to the taxonomic family Equidae. The horse has evolved over the past 45 to 55 million years from a small multi-toed creature, Eohippus, into the large, single-toed animal of today.</p>                
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <h3>Donkey</h3>
+                    <i class="fa-regular fa-circle-xmark" id="close"></i>
+                </div>
+                <p>The donkey or ass (Equus africanus asinus) is a domesticated member of the horse family, Equidae. The wild ancestor of the donkey is the African wild ass, E. africanus. The donkey has been used as a working animal for at least 5000 years.</p>                
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <h3>Cat</h3>
+                    <i class="fa-regular fa-circle-xmark" id="close"></i>
+                </div>
+                <p>The domestic cat (Latin: Felis catus) is a small, typically furry, carnivorous mammal. They are often called house cats when kept as indoor pets or simply cats when there is no need to distinguish them from other felids and felines. Cats are often valued by humans for companionship and for their ability to hunt vermin.</p>                
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div id="container-3">
+            <ul id="tree">
+                <li>
+                    Animals
+                    <ul>
+                        <li>
+                            Mammals
+                            <ul>
+                                <li>Cows</li>
+                                <li>Donkeys</li>
+                                <li>Dogs</li>
+                                <li>Tigers</li>
+                            </ul>
+                        </li>
+                        <li>
+                            Other
+                            <ul>
+                                <li>Snakes</li>
+                                <li>Birds</li>
+                                <li>Lizards</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    Fishes
+                    <ul>
+                        <li>
+                            Aquarium
+                            <ul>
+                                <li>Guppy</li>
+                                <li>Angelfish</li>
+                            </ul>
+                        </li>
+                        <li>
+                            Sea
+                            <ul>
+                                <li>Sea trout</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </section>
+ 
+    <script src="./script.js"></script>
+
+</body>
+</html>
