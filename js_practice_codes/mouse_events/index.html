@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="exp-1">
+        <p>click below button by using left or right mouse button. Can also double clicked</p>
+        <button class="btn-1" style="width : 300px">Click me</button>
+        <button class="clr-btn" style="width:62px" style>Clear</button><br>
+        <textarea class="op-box" style="font-size: 12px; height : 150px; width : 360px; margin : 10px 0"></textarea>
+    </div>
+
+    <div id="exp-2" style="margin : 40px 0">
+        <button>Alt + Click me</button>
+        <button>Shift + Click me</button>
+        <button>Ctrl +  click me</button>
+        <button>Alt + Shift +  click me</button>
+    </div>
+
+    <div id="exp-3" style="margin : 40px 0">
+        <label>clientX : clientY </label>
+        <input type = text style="height : 20px" onmousemove="this.value = event.clientX+':'+event.clientY ">
+    </div>
+
+    <div id="exp-4" style="margin : 40px 0">
+        <p onmousedown="return false"><b>THIS TEXT CAN'T BE SELECT ON DOUBLE CLICK</b></p>
+    </div>
+
+    <div id="exp-5" style="margin : 40px 0">
+        <p oncopy="alert('Copy forbidden'); return false;"><b>THIS TEXT CAN'T BE COPY. Give it a try</b></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
